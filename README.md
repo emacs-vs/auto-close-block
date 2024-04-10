@@ -6,6 +6,42 @@
 
 [![CI](https://github.com/emacs-vs/auto-close-block/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-vs/auto-close-block/actions/workflows/test.yml)
 
+## 🏆 Features
+
+Insert any string pair; `|` is the cursor.
+
+### C / C++ / Java / Rust, etc
+
+```
+Insert /*
+
+/*|*/
+```
+
+### Lua
+
+```
+Insert --[[
+
+--[[|]]
+```
+
+### HTML
+
+```
+Insert <!--
+
+<!-- | -->
+```
+
+### PHP
+
+```
+Insert <?php
+
+<?php |?>
+```
+
 ## 🔧 Usage
 
 Add `auto-close-block-mode` to your desired mode hook:
