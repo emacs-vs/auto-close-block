@@ -110,6 +110,11 @@
 ;; (@* "Core" )
 ;;
 
+(defun auto-close-block--eolp ()
+  "Return non-nil if nothing behind us."
+  (save-excursion
+    (null (re-search-forward "[^[:space:]]" (line-end-position) t))))
+
 (defun auto-close-block--data ()
   "Return block data."
   (cdr (assoc major-mode auto-close-block-pair)))
@@ -118,14 +123,14 @@
   "Hook after change."
   (let ((lsp-inhibit-lsp-hooks))
     (when-let ((adding (< (+ beg len) end))
-               (data (auto-close-block--data)))
+               (data (auto-close-block--data))
+               ((auto-close-block--eolp)))
       (cl-some (lambda (pair)
                  (when-let* ((start (nth 0 pair))
                              (end (nth 1 pair))
                              (after ( or (nth 2 pair) ""))
                              ((looking-back (regexp-quote start)
-                                            (length start)))
-                             ((eolp)))
+                                            (length start))))
                    (insert end)
                    (forward-char (- 0 (length end)))
                    (insert after)
