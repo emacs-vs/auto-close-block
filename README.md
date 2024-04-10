@@ -8,7 +8,7 @@
 
 ## 🔧 Usage
 
-Add `auto-close-block-mode` to your desire mode hook:
+Add `auto-close-block-mode` to your desired mode hook:
 
 ```elisp
 (add-hook 'c-mode-hook #'auto-close-block-mode)
