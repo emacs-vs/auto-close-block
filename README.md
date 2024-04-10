@@ -10,7 +10,8 @@
 
 Insert any string pair; `|` is the cursor.
 
-### ❓ C / C++ / Java / Rust, etc
+<details>
+<summary>C / C++ / Java / Rust, etc</summary>
 
 ```
 Insert /*
@@ -18,7 +19,10 @@ Insert /*
 /*|*/
 ```
 
-### ❓ Lua
+</details>
+
+<details>
+<summary>Lua</summary>
 
 ```
 Insert --[[
@@ -26,7 +30,10 @@ Insert --[[
 --[[|]]
 ```
 
-### ❓ HTML
+</details>
+
+<details>
+<summary>HTML</summary>
 
 ```
 Insert <!--
@@ -34,13 +41,18 @@ Insert <!--
 <!-- | -->
 ```
 
-### ❓ PHP
+</details>
+
+<details>
+<summary>PHP</summary>
 
 ```
 Insert <?php
 
 <?php |?>
 ```
+
+</details>
 
 ## 🔧 Usage
 
