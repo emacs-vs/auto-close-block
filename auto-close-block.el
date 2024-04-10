@@ -120,7 +120,9 @@
   (cdr (assoc major-mode auto-close-block-pair)))
 
 (defun auto-close-block--after-change (beg end len &rest _)
-  "Hook after change."
+  "Hook after change.
+
+Arguments BEG, END and LEN came from the hook."
   (let ((lsp-inhibit-lsp-hooks))
     (when-let ((adding (< (+ beg len) end))
                (data (auto-close-block--data))
