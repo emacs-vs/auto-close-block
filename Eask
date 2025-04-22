@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "auto-close-block"
          "0.1.0"
          "Automatically close block")
